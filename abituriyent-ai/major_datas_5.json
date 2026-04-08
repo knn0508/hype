@@ -1,0 +1,570 @@
+[
+    {
+  "major": "Fiziki tərbiyə və çağırışaqədərki hazırlıq müəllimliyi",
+  "attributes_importance": {
+    "creative_expression": 2,
+    "artistic_sense": 2,
+    "visual_creativity": 2,
+    "design_interest": 2,
+
+    "music_interest": 1,
+    "rhythm_sense": 2,
+    "musical_performance_interest": 1,
+
+    "stage_performance": 2,
+    "acting_interest": 1,
+    "storytelling_creativity": 2,
+
+    "aesthetic_sensitivity": 2,
+    "imagination": 2,
+
+    "physical_activity": 5,
+    "sports_interest": 5,
+    "teamwork": 5,
+    "discipline_training": 5,
+    "coaching_interest": 5,
+    "fitness_training_interest": 5,
+    "athletic_performance_interest": 5,
+    "kinesiology_interest": 4,
+    "sports_psychology_interest": 3,
+    "nutrition_interest": 3,
+    "injury_prevention_interest": 4,
+
+    "teaching_interest": 5,
+    "child_interaction": 4,
+    "communication": 5,
+    "leadership": 4,
+    "motivation_skill": 5,
+    "public_speaking": 4,
+
+    "empathy": 3,
+    "patience": 4,
+    "adaptability": 4,
+    "time_management": 4,
+    "organization_planning": 4,
+    "safety_consciousness": 5,
+    "first_aid_interest": 4
+  }
+},
+{
+    "major": "Musiqi müəllimliyi",
+    "attributes_importance": {
+      "creative_expression": 4,
+      "artistic_sense": 4,
+      "visual_creativity": 2,
+      "design_interest": 2,
+
+      "music_interest": 5,
+      "rhythm_sense": 5,
+      "musical_performance_interest": 4,
+      "music_theory_interest": 5,
+      "composition_interest": 4,
+      "conducting_interest": 3,
+      "ear_training": 5,
+      "instrumental_skill": 4,
+      "vocal_skill": 4,
+      "music_history_interest": 4,
+
+      "stage_performance": 3,
+      "acting_interest": 2,
+      "storytelling_creativity": 2,
+
+      "aesthetic_sensitivity": 4,
+      "imagination": 3,
+
+      "physical_activity": 2,
+      "sports_interest": 1,
+      "teamwork": 4,
+
+      "discipline_training": 5,
+      "teaching_interest": 5,
+      "child_interaction": 4,
+      "communication": 5,
+      "leadership": 3,
+      "motivation_skill": 4,
+      "public_speaking": 3,
+
+      "empathy": 4,
+      "patience": 5,
+      "adaptability": 4,
+      "time_management": 4,
+      "organization_planning": 4,
+      "continuous_learning": 4
+    }
+  },
+  {
+    "major": "Təsviri incəsənət müəllimliyi",
+    "attributes_importance": {
+      "creative_expression": 5,
+      "artistic_sense": 5,
+      "visual_creativity": 5,
+      "design_interest": 4,
+      "drawing_skill": 5,
+      "painting_skill": 5,
+      "sculpture_interest": 3,
+      "digital_art_interest": 3,
+      "art_history_interest": 4,
+      "color_theory_interest": 5,
+      "composition_skill": 5,
+      "perspective_drawing": 4,
+
+      "music_interest": 1,
+      "rhythm_sense": 1,
+      "musical_performance_interest": 1,
+
+      "stage_performance": 1,
+      "acting_interest": 1,
+      "storytelling_creativity": 2,
+
+      "aesthetic_sensitivity": 5,
+      "imagination": 5,
+
+      "physical_activity": 1,
+      "sports_interest": 1,
+      "teamwork": 3,
+
+      "discipline_training": 4,
+      "teaching_interest": 5,
+      "child_interaction": 4,
+      "communication": 5,
+      "leadership": 3,
+      "motivation_skill": 4,
+      "public_speaking": 3,
+      "critique_skill": 4,
+
+      "empathy": 4,
+      "patience": 5,
+      "adaptability": 4,
+      "time_management": 4,
+      "organization_planning": 4,
+      "portfolio_development": 4,
+      "continuous_learning": 4
+    }
+  },
+  {
+    "major": "Aktyor sənəti",
+    "attributes_importance": {
+      "creative_expression": 5,
+      "artistic_sense": 4,
+      "visual_creativity": 3,
+      "design_interest": 2,
+
+      "music_interest": 2,
+      "rhythm_sense": 3,
+      "musical_performance_interest": 2,
+      "singing_ability": 3,
+      "dance_interest": 3,
+
+      "stage_performance": 5,
+      "acting_interest": 5,
+      "storytelling_creativity": 5,
+      "character_development": 5,
+      "improvisation_skill": 5,
+      "voice_control": 5,
+      "body_language_awareness": 5,
+      "emotional_expression": 5,
+      "script_analysis": 4,
+
+      "aesthetic_sensitivity": 4,
+      "imagination": 5,
+
+      "physical_activity": 3,
+      "sports_interest": 2,
+      "teamwork": 5,
+
+      "discipline_training": 4,
+      "teaching_interest": 2,
+      "child_interaction": 2,
+      "communication": 5,
+      "leadership": 3,
+      "motivation_skill": 3,
+      "public_speaking": 5,
+      "networking": 4,
+
+      "empathy": 5,
+      "patience": 4,
+      "adaptability": 5,
+      "time_management": 4,
+      "organization_planning": 3,
+      "stress_management": 4,
+      "confidence": 5,
+      "resilience": 5,
+      "continuous_learning": 4
+    }
+  },
+  {
+    "major": "Bəstəkarlıq",
+    "attributes_importance": {
+      "creative_expression": 5,
+      "artistic_sense": 5,
+      "visual_creativity": 2,
+      "design_interest": 2,
+
+      "music_interest": 5,
+      "rhythm_sense": 5,
+      "musical_performance_interest": 3,
+      "music_theory_interest": 5,
+      "composition_interest": 5,
+      "orchestration_interest": 5,
+      "arranging_interest": 4,
+      "ear_training": 5,
+      "instrumental_skill": 4,
+      "vocal_skill": 3,
+      "music_history_interest": 4,
+      "sound_design_interest": 4,
+      "electronic_music_interest": 3,
+
+      "stage_performance": 2,
+      "acting_interest": 1,
+      "storytelling_creativity": 4,
+
+      "aesthetic_sensitivity": 5,
+      "imagination": 5,
+
+      "physical_activity": 1,
+      "sports_interest": 1,
+      "teamwork": 2,
+
+      "discipline_training": 5,
+      "teaching_interest": 2,
+      "child_interaction": 1,
+      "communication": 3,
+      "leadership": 2,
+      "motivation_skill": 3,
+      "public_speaking": 2,
+
+      "empathy": 4,
+      "patience": 5,
+      "adaptability": 3,
+      "time_management": 4,
+      "organization_planning": 4,
+      "solitary_work_comfort": 5,
+      "continuous_learning": 4
+    }
+  },
+  {
+    "major": "Dekorativ tətbiqi sənət",
+    "attributes_importance": {
+      "creative_expression": 5,
+      "artistic_sense": 5,
+      "visual_creativity": 4,
+      "design_interest": 4,
+      "drawing_skill": 4,
+      "painting_skill": 3,
+      "craftsmanship": 5,
+      "textile_art_interest": 4,
+      "ceramic_art_interest": 4,
+      "woodworking_interest": 3,
+      "metalworking_interest": 3,
+      "glass_art_interest": 3,
+      "traditional_crafts_interest": 5,
+      "folk_art_interest": 5,
+
+      "music_interest": 1,
+      "rhythm_sense": 1,
+      "musical_performance_interest": 1,
+
+      "stage_performance": 1,
+      "acting_interest": 1,
+      "storytelling_creativity": 2,
+
+      "aesthetic_sensitivity": 5,
+      "imagination": 4,
+
+      "physical_activity": 2,
+      "sports_interest": 1,
+      "teamwork": 2,
+
+      "discipline_training": 5,
+      "teaching_interest": 3,
+      "child_interaction": 2,
+      "communication": 3,
+      "leadership": 2,
+      "motivation_skill": 2,
+      "public_speaking": 2,
+
+      "empathy": 3,
+      "patience": 5,
+      "adaptability": 3,
+      "time_management": 4,
+      "organization_planning": 4,
+      "attention_to_detail": 5,
+      "precision_hand_skills": 5,
+      "material_knowledge": 4,
+      "continuous_learning": 4
+    }
+  },
+  {
+    "major": "Dirijorluq",
+    "attributes_importance": {
+      "creative_expression": 4,
+      "artistic_sense": 5,
+      "visual_creativity": 3,
+      "design_interest": 2,
+
+      "music_interest": 5,
+      "rhythm_sense": 5,
+      "musical_performance_interest": 4,
+      "music_theory_interest": 5,
+      "composition_interest": 3,
+      "conducting_interest": 5,
+      "ear_training": 5,
+      "instrumental_skill": 4,
+      "vocal_skill": 3,
+      "music_history_interest": 5,
+      "orchestration_interest": 5,
+      "score_reading": 5,
+
+      "stage_performance": 4,
+      "acting_interest": 2,
+      "storytelling_creativity": 3,
+
+      "aesthetic_sensitivity": 5,
+      "imagination": 4,
+
+      "physical_activity": 2,
+      "sports_interest": 1,
+      "teamwork": 5,
+
+      "discipline_training": 5,
+      "teaching_interest": 3,
+      "child_interaction": 1,
+      "communication": 5,
+      "leadership": 5,
+      "motivation_skill": 5,
+      "public_speaking": 3,
+
+      "empathy": 4,
+      "patience": 4,
+      "adaptability": 4,
+      "time_management": 4,
+      "organization_planning": 5,
+      "ensemble_management": 5,
+      "rehearsal_planning": 5,
+      "authority_presence": 5,
+      "continuous_learning": 4
+    }
+  },
+  {
+    "major": "Dizayn",
+    "attributes_importance": {
+      "creative_expression": 5,
+      "artistic_sense": 5,
+      "visual_creativity": 5,
+      "design_interest": 5,
+      "drawing_skill": 4,
+      "painting_skill": 3,
+      "graphic_design_interest": 5,
+      "ui_ux_design_interest": 5,
+      "web_design_interest": 4,
+      "typography_interest": 4,
+      "color_theory_interest": 5,
+      "layout_design": 5,
+      "branding_interest": 4,
+      "packaging_design_interest": 3,
+      "motion_graphics_interest": 3,
+      "3d_modeling_interest": 3,
+
+      "music_interest": 1,
+      "rhythm_sense": 1,
+      "musical_performance_interest": 1,
+
+      "stage_performance": 1,
+      "acting_interest": 1,
+      "storytelling_creativity": 3,
+
+      "aesthetic_sensitivity": 5,
+      "imagination": 5,
+
+      "physical_activity": 1,
+      "sports_interest": 1,
+      "teamwork": 3,
+
+      "discipline_training": 4,
+      "teaching_interest": 2,
+      "child_interaction": 1,
+      "communication": 4,
+      "leadership": 3,
+      "motivation_skill": 3,
+      "public_speaking": 3,
+      "client_communication": 4,
+      "presentation_skill": 4,
+
+      "empathy": 4,
+      "patience": 4,
+      "adaptability": 5,
+      "time_management": 4,
+      "organization_planning": 4,
+      "attention_to_detail": 5,
+      "software_proficiency": 5,
+      "trend_awareness": 4,
+      "user_centered_thinking": 5,
+      "feedback_receptivity": 4,
+      "continuous_learning": 5
+    }
+  },
+  {
+    "major": "Heykəltəraşlıq",
+    "attributes_importance": {
+      "creative_expression": 5,
+      "artistic_sense": 5,
+      "visual_creativity": 4,
+      "design_interest": 3,
+      "drawing_skill": 4,
+      "painting_skill": 2,
+      "sculpture_skill": 5,
+      "3d_visualization": 5,
+      "spatial_reasoning": 5,
+      "anatomy_knowledge": 4,
+      "material_knowledge": 5,
+      "stone_carving_interest": 4,
+      "wood_carving_interest": 4,
+      "metal_sculpture_interest": 4,
+      "clay_modeling": 5,
+      "casting_techniques": 4,
+      "digital_sculpting_interest": 3,
+
+      "music_interest": 1,
+      "rhythm_sense": 1,
+      "musical_performance_interest": 1,
+
+      "stage_performance": 1,
+      "acting_interest": 1,
+      "storytelling_creativity": 2,
+
+      "aesthetic_sensitivity": 5,
+      "imagination": 4,
+
+      "physical_activity": 3,
+      "sports_interest": 1,
+      "teamwork": 2,
+
+      "discipline_training": 5,
+      "teaching_interest": 2,
+      "child_interaction": 1,
+      "communication": 3,
+      "leadership": 2,
+      "motivation_skill": 2,
+      "public_speaking": 2,
+
+      "empathy": 3,
+      "patience": 5,
+      "adaptability": 3,
+      "time_management": 4,
+      "organization_planning": 4,
+      "attention_to_detail": 5,
+      "precision_hand_skills": 5,
+      "strength_stamina": 4,
+      "safety_consciousness": 5,
+      "continuous_learning": 4
+    }
+  },
+  {
+    "major": "İnstrumental ifaçılıq",
+    "attributes_importance": {
+      "creative_expression": 4,
+      "artistic_sense": 4,
+      "visual_creativity": 2,
+      "design_interest": 1,
+
+      "music_interest": 5,
+      "rhythm_sense": 5,
+      "musical_performance_interest": 5,
+      "music_theory_interest": 4,
+      "composition_interest": 3,
+      "ear_training": 5,
+      "instrumental_skill": 5,
+      "vocal_skill": 2,
+      "music_history_interest": 4,
+      "ensemble_performance_interest": 4,
+      "solo_performance_interest": 5,
+      "sight_reading": 5,
+      "technique_development": 5,
+      "repertoire_building": 4,
+
+      "stage_performance": 4,
+      "acting_interest": 2,
+      "storytelling_creativity": 3,
+
+      "aesthetic_sensitivity": 5,
+      "imagination": 4,
+
+      "physical_activity": 2,
+      "sports_interest": 1,
+      "teamwork": 3,
+
+      "discipline_training": 5,
+      "teaching_interest": 3,
+      "child_interaction": 2,
+      "communication": 3,
+      "leadership": 2,
+      "motivation_skill": 3,
+      "public_speaking": 3,
+      "stage_presence": 5,
+
+      "empathy": 4,
+      "patience": 5,
+      "adaptability": 4,
+      "time_management": 4,
+      "organization_planning": 4,
+      "performance_anxiety_management": 4,
+      "stress_management": 4,
+      "continuous_learning": 5
+    }
+  },
+  {
+    "major": "Musiqişünaslıq",
+    "attributes_importance": {
+      "creative_expression": 3,
+      "artistic_sense": 4,
+      "visual_creativity": 2,
+      "design_interest": 1,
+
+      "music_interest": 5,
+      "rhythm_sense": 4,
+      "musical_performance_interest": 2,
+      "music_theory_interest": 5,
+      "composition_interest": 2,
+      "ear_training": 4,
+      "instrumental_skill": 3,
+      "vocal_skill": 2,
+      "music_history_interest": 5,
+      "music_analysis_interest": 5,
+      "ethnomusicology_interest": 4,
+      "music_criticism_interest": 4,
+      "musicology_research": 5,
+      "score_analysis": 5,
+
+      "stage_performance": 1,
+      "acting_interest": 1,
+      "storytelling_creativity": 3,
+
+      "aesthetic_sensitivity": 5,
+      "imagination": 3,
+
+      "physical_activity": 1,
+      "sports_interest": 1,
+      "teamwork": 2,
+
+      "discipline_training": 5,
+      "teaching_interest": 4,
+      "child_interaction": 2,
+      "communication": 4,
+      "leadership": 2,
+      "motivation_skill": 2,
+      "public_speaking": 3,
+      "writing_skill": 5,
+
+      "empathy": 3,
+      "patience": 4,
+      "adaptability": 3,
+      "time_management": 4,
+      "organization_planning": 4,
+      "research_skill": 5,
+      "critical_thinking": 5,
+      "analytical_thinking": 5,
+      "attention_to_detail": 4,
+      "continuous_learning": 5
+    }
+  }
+]
