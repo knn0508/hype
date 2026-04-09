@@ -16,6 +16,43 @@ const EXAM_GROUPS = [
   { id: 5, name: 'V Qrup — İncəsənət, Bədən Tərbiyəsi', description: 'İncəsənət · Musiqi · İdman' },
 ];
 
+const ATTRIBUTE_CATEGORIES = [
+  {
+    name: 'Ümumi və Yumşaq Bacarıqlar',
+    hint: 'Düşüncə tərzi, ünsiyyət və şəxsi keyfiyyətlər',
+    keywords: ['thinking', 'reasoning', 'problem', 'creativity', 'communication', 'teamwork', 'leadership', 'patience', 'attention', 'learning', 'empathy', 'speaking', 'awareness', 'adaptability', 'management', 'detail', 'habit', 'interaction', 'curiosity', 'logical', 'abstract']
+  },
+  {
+    name: 'Elm və Riyaziyyat',
+    hint: 'Məntiqi və təbiət elmləri ilə bağlı bacarıqlar',
+    keywords: ['math', 'biology', 'chemistry', 'physics', 'science', 'scientific', 'laboratory', 'anatomy', 'medical', 'research', 'experiment', 'nature']
+  },
+  {
+    name: 'Texnologiya və Mühəndislik',
+    hint: 'Proqramlaşdırma, sistem və texniki maraqlar',
+    keywords: ['programming', 'technology', 'coding', 'software', 'engineering', 'hardware', 'network', 'database', 'cybersecurity', 'ai', 'data', 'algorithm', 'system', 'debugging', 'machine']
+  },
+  {
+    name: 'Biznes və Sosial Sahə',
+    hint: 'İdarəetmə, maliyyə, hüquq və sosial yönümlü bacarıqlar',
+    keywords: ['business', 'economic', 'entrepreneurship', 'finance', 'market', 'management', 'social', 'helping', 'child', 'psychology', 'sociology', 'history', 'law', 'diplomacy', 'teaching']
+  },
+  {
+    name: 'İncəsənət, Dil və Coğrafiya',
+    hint: 'Yaradıcı, dil və məkan düşüncəsi bacarıqları',
+    keywords: ['art', 'creative', 'visual', 'design', 'music', 'rhythm', 'language', 'writing', 'reading', 'geography', 'environmental', 'travel', 'sports', 'physical']
+  },
+  {
+    name: 'Digər Bacarıqlar',
+    hint: 'Yuxarıdakı kateqoriyalara düşməyən əlavə xüsusiyyətlər',
+    keywords: []
+  }
+];
+
+const formatAttributeName = (attr: string) => {
+  return attr.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+};
+
 export default function HomePage() {
   const router = useRouter();
   const [step, setStep] = useState<1 | 2 | 3>(1);
@@ -234,100 +271,116 @@ export default function HomePage() {
 
         {step === 2 && (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-             <div className="text-center mb-10">
+            <div className="text-center mb-10">
               <h2 className="text-4xl font-serif text-white mb-3">Xüsusiyyətlər</h2>
-              <p className="text-text-muted text-base">Xarakterinizə uyğun xüsusiyyətləri müəyyən edin</p>
+              <p className="text-text-muted text-base">Xarakterinizə uyğun xüsusiyyətləri seçin və dəyərləndirin</p>
             </div>
-             
-             <div className="card-glass p-6 lg:p-8 rounded-2xl shadow-xl space-y-8">
-              <div className="grid grid-cols-1 gap-6 border-b border-white/5 pb-8">
-                {[
-                  {
-                    name: 'General & Soft Skills',
-                    keywords: ['thinking', 'reasoning', 'problem', 'creativity', 'communication', 'teamwork', 'leadership', 'patience', 'attention', 'learning', 'empathy', 'speaking', 'awareness', 'adaptability', 'management', 'detail', 'habit', 'interaction', 'curiosity', 'logical', 'abstract']
-                  },
-                  {
-                    name: 'Science & Math',
-                    keywords: ['math', 'biology', 'chemistry', 'physics', 'science', 'scientific', 'laboratory', 'anatomy', 'medical', 'research', 'experiment', 'nature']
-                  },
-                  {
-                    name: 'Technology & Engineering',
-                    keywords: ['programming', 'technology', 'coding', 'software', 'engineering', 'hardware', 'network', 'database', 'cybersecurity', 'ai', 'data', 'algorithm', 'system', 'debugging', 'machine']
-                  },
-                  {
-                    name: 'Business & Social',
-                    keywords: ['business', 'economic', 'entrepreneurship', 'finance', 'market', 'management', 'social', 'helping', 'child', 'psychology', 'sociology', 'history', 'law', 'diplomacy', 'teaching']
-                  },
-                  {
-                    name: 'Arts, Language & Geography',
-                    keywords: ['art', 'creative', 'visual', 'design', 'music', 'rhythm', 'language', 'writing', 'reading', 'geography', 'environmental', 'travel', 'sports', 'physical']
-                  },
-                  {
-                    name: 'Other Skills & Interests',
-                    keywords: [] 
-                  }
-                ].map((category, index, array) => {
-                  let categoryAttrs;
-                  if (index === array.length - 1) {
-                     const previousKeywords = array.slice(0, index).flatMap(c => c.keywords);
-                     categoryAttrs = attributes.filter(attr => 
-                       !previousKeywords.some(kw => attr.includes(kw))
-                     ).filter(attr => !scores.hasOwnProperty(attr));
-                  } else {
-                     categoryAttrs = attributes.filter(attr => 
-                       category.keywords.some(kw => attr.includes(kw))
-                     ).filter(attr => !scores.hasOwnProperty(attr));
-                  }
 
-                  if (categoryAttrs.length === 0) return null;
-
-                  return (
-                    <div key={category.name}>
-                      <label className="block text-[10px] font-bold text-gold uppercase tracking-[0.10em] mb-3">
-                        {category.name}
-                      </label>
-                      <select
-                        className="w-full p-4 bg-navy-dark border border-white/10 rounded-xl text-white text-sm focus:ring-1 focus:ring-gold focus:border-gold outline-none transition-colors appearance-none"
-                        onChange={handleAddAttribute}
-                        defaultValue=""
-                      >
-                        <option value="" disabled>--- Seçmək üçün toxunun ---</option>
-                        {categoryAttrs.map(attr => (
-                          <option key={attr} value={attr} className="bg-navy">
-                            {attr.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                  );
-                })}
+            <div className="card-glass p-5 md:p-6 lg:p-8 rounded-2xl shadow-xl space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="md:col-span-1 p-4 rounded-xl border border-gold/20 bg-gold-surface">
+                  <p className="text-[10px] font-bold text-gold uppercase tracking-[0.12em] mb-1">Addım 1</p>
+                  <p className="text-sm text-white/90">Kateqoriyadan bir xüsusiyyət seçin.</p>
+                </div>
+                <div className="md:col-span-1 p-4 rounded-xl border border-white/10 bg-white/[0.02]">
+                  <p className="text-[10px] font-bold text-gold uppercase tracking-[0.12em] mb-1">Addım 2</p>
+                  <p className="text-sm text-white/90">Seçdiyiniz xüsusiyyət üçün 1-5 arası bal verin.</p>
+                </div>
+                <div className="md:col-span-1 p-4 rounded-xl border border-white/10 bg-white/[0.02]">
+                  <p className="text-[10px] font-bold text-gold uppercase tracking-[0.12em] mb-1">Addım 3</p>
+                  <p className="text-sm text-white/90">Bal verdikdən sonra nəticələrə keçin.</p>
+                </div>
               </div>
 
-              {Object.keys(scores).length === 0 ? (
-                <div className="text-center py-10 text-text-muted">
-                  Heç bir xüsusiyyət seçilməyib. Zəhmət olmasa təklif olunanları qiymətləndirin.
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <div className="lg:col-span-5 space-y-4">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-serif text-white">Xüsusiyyət Əlavə Et</h3>
+                    <span className="text-[10px] text-gold uppercase tracking-[0.10em] font-bold">Mövcud: {attributes.length}</span>
+                  </div>
+
+                  <div className="space-y-3 max-h-[520px] overflow-y-auto pr-1">
+                    {ATTRIBUTE_CATEGORIES.map((category, index, array) => {
+                      let categoryAttrs: string[];
+
+                      if (index === array.length - 1) {
+                        const previousKeywords = array.slice(0, index).flatMap(c => c.keywords);
+                        categoryAttrs = attributes
+                          .filter(attr => !previousKeywords.some(kw => attr.includes(kw)))
+                          .filter(attr => !scores.hasOwnProperty(attr));
+                      } else {
+                        categoryAttrs = attributes
+                          .filter(attr => category.keywords.some(kw => attr.includes(kw)))
+                          .filter(attr => !scores.hasOwnProperty(attr));
+                      }
+
+                      if (categoryAttrs.length === 0) return null;
+
+                      return (
+                        <div key={category.name} className="p-4 rounded-xl border border-white/10 bg-white/[0.02] space-y-3">
+                          <div>
+                            <p className="text-[10px] font-bold text-gold uppercase tracking-[0.10em]">{category.name}</p>
+                            <p className="text-xs text-text-muted mt-1">{category.hint}</p>
+                          </div>
+
+                          <select
+                            className="w-full p-3 bg-navy-dark border border-white/10 rounded-lg text-white text-sm focus:ring-1 focus:ring-gold focus:border-gold outline-none transition-colors appearance-none"
+                            onChange={handleAddAttribute}
+                            defaultValue=""
+                          >
+                            <option value="" disabled>Seçmək üçün toxunun</option>
+                            {categoryAttrs.map(attr => (
+                              <option key={attr} value={attr} className="bg-navy">
+                                {formatAttributeName(attr)}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
-              ) : (
-                <div className="grid gap-4">
-                  {Object.keys(scores).map((attr) => (
-                    <div key={attr} className="relative p-5 border border-white/5 rounded-xl bg-white/[0.02]">
-                      <button
-                        onClick={() => handleRemoveAttribute(attr)}
-                        className="absolute top-4 right-4 text-white/20 hover:text-red-400 font-bold transition-colors w-6 h-6 flex items-center justify-center rounded-full hover:bg-red-400/10"
-                      >
-                        ✕
-                      </button>
-                      <div className="pr-8">
-                        <AttributeSlider
-                          attribute={attr}
-                          value={scores[attr] || 3}
-                          onChange={(value) => handleScoreChange(attr, value)}
-                        />
-                      </div>
+
+                <div className="lg:col-span-7 space-y-4">
+                  <div className="flex items-center justify-between p-4 rounded-xl border border-white/10 bg-white/[0.02]">
+                    <div>
+                      <h3 className="text-lg font-serif text-white">Seçilən Xüsusiyyətlər</h3>
+                      <p className="text-xs text-text-muted mt-1">Nə qədər çox və düzgün qiymətləndirsəniz, analiz bir o qədər dəqiq olar.</p>
                     </div>
-                  ))}
+                    <div className="text-right">
+                      <p className="text-2xl font-serif text-gold leading-none">{Object.keys(scores).length}</p>
+                      <p className="text-[10px] text-white/50 uppercase tracking-[0.10em] font-bold mt-1">Seçim</p>
+                    </div>
+                  </div>
+
+                  {Object.keys(scores).length === 0 ? (
+                    <div className="text-center py-14 px-6 rounded-xl border border-dashed border-white/15 text-text-muted bg-white/[0.02]">
+                      Hələ xüsusiyyət seçilməyib. Sol tərəfdəki kateqoriyalardan başlayın.
+                    </div>
+                  ) : (
+                    <div className="grid gap-4">
+                      {Object.keys(scores).map((attr) => (
+                        <div key={attr} className="relative p-5 border border-white/10 rounded-xl bg-white/[0.02]">
+                          <button
+                            onClick={() => handleRemoveAttribute(attr)}
+                            className="absolute top-4 right-4 text-white/20 hover:text-red-400 font-bold transition-colors w-6 h-6 flex items-center justify-center rounded-full hover:bg-red-400/10"
+                            aria-label="Xüsusiyyəti sil"
+                          >
+                            ✕
+                          </button>
+                          <div className="pr-8">
+                            <AttributeSlider
+                              attribute={attr}
+                              value={scores[attr] || 3}
+                              onChange={(value) => handleScoreChange(attr, value)}
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              )}
+              </div>
             </div>
 
             <div className="flex justify-between pt-10 items-center">

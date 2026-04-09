@@ -5,6 +5,7 @@ import sqlite3
 import json
 import os
 from pathlib import Path
+from typing import Any
 
 DB_PATH = Path(__file__).parent / "data" / "abituriyent.db"
 
@@ -20,6 +21,7 @@ GROUP_FILES = {
 
 def get_connection() -> sqlite3.Connection:
     """Get database connection with row factory."""
+    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = sqlite3.Row
     return conn
@@ -157,7 +159,7 @@ def get_majors_for_group(group_id: int) -> list:
         for row in rows
     ]
 
-def get_user_by_email(email: str) -> dict:
+def get_user_by_email(email: str) -> dict[str, Any] | None:
     """Retrieve user by email."""
     conn = get_connection()
     cursor = conn.cursor()
@@ -166,7 +168,7 @@ def get_user_by_email(email: str) -> dict:
     conn.close()
     return dict(user) if user else None
 
-def create_user(name: str, email: str, hashed_password: str) -> dict:
+def create_user(name: str, email: str, hashed_password: str) -> dict[str, Any] | None:
     """Create a new user."""
     conn = get_connection()
     cursor = conn.cursor()
@@ -186,7 +188,7 @@ def create_user(name: str, email: str, hashed_password: str) -> dict:
     conn.close()
     return dict(user) if user else None
 
-def save_result(user_id: int, exam_group: int, top_major: str, match_percentage: float, ai_review: str) -> dict:
+def save_result(user_id: int, exam_group: int, top_major: str, match_percentage: float, ai_review: str) -> dict[str, Any] | None:
     """Save a career analysis result for a user."""
     conn = get_connection()
     cursor = conn.cursor()
