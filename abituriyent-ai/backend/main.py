@@ -50,6 +50,7 @@ app.add_middleware(
         "http://localhost:3000",
         "http://localhost:3001",
         "https://abituriyent-ai.vercel.app",
+        "https://hype-jjd12v1hp-nihadtaghiyev1-9395s-projects.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
