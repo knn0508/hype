@@ -3,20 +3,33 @@ SQLite Database initialization and connection management.
 """
 import sqlite3
 import json
-import os
 from pathlib import Path
 from typing import Any
 
 DB_PATH = Path(__file__).parent / "data" / "abituriyent.db"
 
-# Mapping of exam groups to JSON files (using user's existing files)
-GROUP_FILES = {
-    1: Path(__file__).parent.parent / "major_datas_1.json",
-    2: Path(__file__).parent.parent / "major_datas_2.json",
-    3: Path(__file__).parent.parent / "major_datas_3.json",
-    4: Path(__file__).parent.parent / "major_datas_4.json",
-    5: Path(__file__).parent.parent / "major_datas_5.json",
-}
+def resolve_group_file(group_id: int) -> Path | None:
+    """Resolve seed JSON path from common deployment locations."""
+    filename = f"major_datas_{group_id}.json"
+    candidates = [
+        Path(__file__).parent.parent / filename,          # repo root
+        Path(__file__).parent / filename,                 # backend/
+        Path(__file__).parent / "data" / filename,        # backend/data/
+    ]
+    for path in candidates:
+        if path.exists():
+            return path
+    return None
+
+
+def get_majors_count() -> int:
+    """Return number of rows in majors table."""
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT COUNT(*) FROM majors")
+    count = cursor.fetchone()[0]
+    conn.close()
+    return int(count)
 
 
 def get_connection() -> sqlite3.Connection:
@@ -75,17 +88,29 @@ def init_database():
 def seed_database():
     """Seed database with major data from JSON files."""
     init_database()
+
+    group_files: dict[int, Path] = {}
+    for group_id in range(1, 6):
+        resolved = resolve_group_file(group_id)
+        if resolved:
+            group_files[group_id] = resolved
+
+    # If seed files are unavailable in deployment, keep any existing majors data.
+    if not group_files:
+        existing_count = get_majors_count()
+        if existing_count > 0:
+            print(f"Seed files not found; keeping existing majors data ({existing_count} rows).")
+            return
+        print("Warning: no seed files found and majors table is empty.")
+        return
+
     conn = get_connection()
     cursor = conn.cursor()
 
     # Clear existing data
     cursor.execute("DELETE FROM majors")
 
-    for group_id, json_path in GROUP_FILES.items():
-        if not json_path.exists():
-            print(f"Warning: JSON file not found: {json_path}")
-            continue
-
+    for group_id, json_path in group_files.items():
         with open(json_path, "r", encoding="utf-8") as f:
             majors = json.load(f)
 
