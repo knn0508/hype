@@ -13,10 +13,6 @@ env/
 .env
 .env.local
 
-# Database
-data/*.db
-data/*.db-journal
-
 # IDE
 .idea/
 .vscode/
